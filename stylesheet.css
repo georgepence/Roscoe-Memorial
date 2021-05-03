@@ -1,0 +1,33 @@
+body {
+	font-family: "Helvetica Neue", Arial, Verdana, sans-serif;
+	font-weight: thin;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+/* 	width: 120px; */
+}
+
+li {
+  display: inline;
+}
+
+/* li a {
+	display: block;
+	background-color: FFF8E8;
+	text-decoration: none;
+	color: #9E6436;
+	padding: 8px 16px;
+} */
+/* 
+li a:hover {
+	background-color: #555;
+	color: white;
+}
+
+.active {
+	background-color: #6699CC;
+	color: white;
+} */
