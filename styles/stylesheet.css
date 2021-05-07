@@ -15,21 +15,11 @@ div#gallery-main {
 	min-height: 300px;									/* Todo */
 	max-width: 1200px;
 	width: 80%;
-	float: left;
+	float: right;
 }
-
-/* TODO */
-@media only screen and (max-width: 768px) {
-	div#gallery-scroll {
-		width: 100%;
-		float: right;
-		background-color: black;
-	}
-}
-/* TODO */
 
 div#gallery-scroll {
-	background-color: aquamarine;
+	background-color: #ff0000;
 	max-height: 900px;
 	min-height: 300px;									/* Todo */
 	max-width: 300px;
@@ -63,14 +53,16 @@ div.lifestory {
 }
 
 div.homepage {
+	position: relative;
 	background-color: #FFF8E8;
 	margin: 5px;
-	padding: 20px;
-	width: 95%;
+	padding: 0px;
+	overflow: hidden;
+	width: 100%;
 	max-width: 1440px;
 	min-height: 1000px;
 }
-
+/* todo
 #navigation-menu {
 	height: 50px;
 	padding-right: 30px;
@@ -81,6 +73,7 @@ div.homepage {
 	width: 95%;
 	max-width: 1440px;
 }
+todo */
 
 #carousel {
 	height: 600px;
@@ -114,6 +107,28 @@ li a {
 	color: #9E6436;
 	padding: 8px 45px;
 }
+
+
+/* TODO */
+@media screen and (max-width: 600px) {
+	div#gallery-scroll {
+		width: 100%;
+		background-color: black;
+		float: right;
+		/*min-height: 2000px;*/
+	}
+	div#gallery-main{
+		float:left;
+		width: 100%;
+		background-color: #ff0000;
+	}
+	/*	width: 100%;*/
+	/*	float: none;*/
+	/*	background-color: #000000;*/
+	/*}*/
+}
+/* TODO */
+
 
 @media screen and (max-width: 600px) {
 	ul li {float: none}
