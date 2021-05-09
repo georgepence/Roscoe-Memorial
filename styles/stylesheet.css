@@ -9,11 +9,16 @@ body {
 	background-color: #EFE8D8;
 }
 
+
+div#carousel {
+	height: 900px;
+}
+
 div#gallery-main {
 	background-color: lightskyblue;
 	max-height: 900px;
-	min-height: 300px;									/* Todo */
-	max-width: 1200px;
+	min-height: 600px;									/* Todo */
+	max-width: 900px;
 	width: 80%;
 	float: right;
 }
@@ -21,10 +26,18 @@ div#gallery-main {
 div#gallery-scroll {
 	background-color: #ff0000;
 	max-height: 900px;
-	min-height: 300px;									/* Todo */
-	max-width: 300px;
+	min-height: 600px;									/* Todo */
+	max-width: 225px;
 	width: 20%;
 	float: left;
+	text-align: center;
+}
+
+img.scroll {
+	width: 100%;
+	max-width: 165px;
+	float: none;
+	position: relative;
 }
 
 header {
@@ -48,8 +61,8 @@ div.lifestory {
 	margin: 5px;
 	padding: 20px;
 	width: 100%;
-	max-width: 1440px;
-	min-height: 1000px;
+	max-width: 1125px;
+	min-height: 700px;
 }
 
 div.homepage {
@@ -59,8 +72,8 @@ div.homepage {
 	padding: 0px;
 	overflow: hidden;
 	width: 100%;
-	max-width: 1440px;
-	min-height: 1000px;
+	max-width: 1125px;
+	min-height: 700px;
 }
 /* todo
 #navigation-menu {
@@ -75,10 +88,6 @@ div.homepage {
 }
 todo */
 
-#carousel {
-	height: 600px;
-}
-
 ul {
 	list-style-type: none;
 	position: relative;
@@ -88,7 +97,7 @@ ul {
 	width: 100%;
 	letter-spacing: 0.10em;
 	background-color: #FFF8E8;
-	max-width: 1440px;
+	max-width: 1125px;
 }
 
 li {
@@ -113,6 +122,9 @@ li a {
 @media screen and (max-width: 600px) {
 	div#gallery-scroll {
 		width: 100%;
+		max-width: 600px;
+		min-height: 100px;
+		max-height: 100px;
 		background-color: black;
 		float: right;
 		/*min-height: 2000px;*/
@@ -120,8 +132,14 @@ li a {
 	div#gallery-main{
 		float:left;
 		width: 100%;
+		max-height: 600px;
 		background-color: #ff0000;
 	}
+	img.scroll{
+		height: 100px;
+		width: 100px;
+	}
+
 	/*	width: 100%;*/
 	/*	float: none;*/
 	/*	background-color: #000000;*/
@@ -154,6 +172,17 @@ li a:hover {
 #image-life {
 	width: 100%;
 	max-width: 450px;
+	margin-top: 1%;
+	margin-right: 1%;
+	margin-bottom: 3%;
+	margin-left: 3%;
+	position: relative;
+	float: right;
+	opacity: 100%;
+}
+
+img.gallery-main {
+	width: 98%;
 	margin-top: 1%;
 	margin-right: 1%;
 	margin-bottom: 3%;
