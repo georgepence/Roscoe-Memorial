@@ -130,11 +130,11 @@ img.scroll {
 	margin-top: 5px;
 }
 
-img.inactive {
+img.no-show {
 	display: none;
 }
 
-img.active {
+img.show {
 	display: block;
 }
 
