@@ -130,6 +130,14 @@ img.scroll {
 	margin-top: 5px;
 }
 
+img.inactive {
+	display: none;
+}
+
+img.active {
+	display: block;
+}
+
 /* TODO */
 @media screen and (max-width: 600px) {
 	div#gallery-scroll {
