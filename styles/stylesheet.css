@@ -95,7 +95,7 @@ div#carousel {
 div#gallery-main {
 	background-color: lightskyblue;
 	max-height: 900px;
-	min-height: 600px;									/* Todo */
+	min-height: 300px;									/* Todo */
 	max-width: 900px;
 	width: 80%;
 	float: right;
@@ -103,12 +103,14 @@ div#gallery-main {
 
 div#gallery-scroll {
 	background-color: #ff0000;
+	height: 100%;
 	max-height: 900px;
-	min-height: 600px;									/* Todo */
+	min-height: 300px;									/* Todo */
 	max-width: 225px;
 	width: 20%;
 	float: left;
 	text-align: center;
+	overflow: auto;
 }
 
 img.gallery-main {
