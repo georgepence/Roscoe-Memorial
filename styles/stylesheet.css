@@ -33,6 +33,7 @@ div.lifestory {
 	width: 100%;
 	max-width: 1125px;
 	min-height: 700px;
+	overflow: hidden;
 }
 
 /* || Navigation Menu --------------------------------------------------------- */
@@ -152,9 +153,14 @@ img.show {
 	div#gallery-main{
 		float:left;
 		width: 100%;
-		max-height: 600px;
+		min-height: 0px;
 		background-color: #ff0000;
 	}
+
+	div#gallery-container {
+		min-height: 0px;
+	}
+
 	img.scroll{
 		height: 100px;
 		width: 100px;
