@@ -1,10 +1,19 @@
 
 window.addEventListener("load", function() {
-  document.getElementById("pose").classList.add("show");
-  addScrollListeners();
+  let pics = document.getElementsByClassName("carousel-pics");
+  pic[pic.length - 1].style.opacity = "1.0";
+  runGallery(pics);
 })
 
-function addScrollListeners() {
+function runGallery(pics) {
+  while (true) {
+    for (let pic in pics) {
+      for (let opac = 0.0; opac <= 1.0; opac += 0.1) {
+        pic.style.opacity = toString(opac);
+        setTimeout(200)
+      }
+    }
+  }
   document.getElementById("pals-thumb").addEventListener('click', function () {
     console.log(document.getElementsByClassName("show"))
     document.getElementsByClassName("show")[0].classList.remove("show");
@@ -51,4 +60,3 @@ function addScrollListeners() {
     document.getElementById("memorial").classList.add("show");
   })
 }
-

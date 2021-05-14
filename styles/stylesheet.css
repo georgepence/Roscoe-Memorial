@@ -26,6 +26,20 @@ p {
 	font-weight: 200;
 }
 
+div.aspect-ratio {
+	padding-top: 75%;
+	width: 100%;
+	position: relative;
+}
+
+div.aspect2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
 div.lifestory {
 	background-color: #FFF8E8;
 	margin: 5px;
