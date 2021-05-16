@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guest Book</title>
+  <link rel="stylesheet" href="styles/stylesheet.css" type="text/css">
+  <script src="scripts/guest_book.js"></script>
+</head>
+<body>
+<!-- Menu implementation based on https://www.w3schools.com/css/css_navbar_vertical.asp -->
+<!--<div id="navigation-menu" class="lifestory">-->
+<ul class="nav-bar">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="lifestory.html">Life Story</a></li>
+  <li><a href="gallery.html">Gallery</a></li>
+  <li><a class="active" href="">Guest Book</a></li>
+  <li><a href="/spca">SPCA</a></li>
+</ul>
+<!--</div>-->
+<div id="life-story" class="lifestory">
+  <img id="guest-book-memorial" src="images/memorial_450x600.jpeg" alt="Roscoe Memorial Garden Stone">
+  <header>
+    Guest Book
+  </header>
+<form method="POST">
+  <fieldset class="guest_book">
+    <textarea id="message" name="message" rows="3" placeholder="Leave a message..."></textarea>
+    <input type="text" class="text" id="name" name="name" placeholder="Your name">
+    <input type="text" class="text" id="e-mail" name="email" placeholder="Your e-mail">
+    <br/><br/>
+    <label class="check">
+      <input type="checkbox" id="hide-name" name="hide">
+      Check here if you do not wish your name to appear in Guest Book with your message
+    </label>
+    <br/>
+    <input type="submit" class="submit" value="Send your message" />
+  </fieldset>
+</form>
+</div>
+</body>
+</html>
