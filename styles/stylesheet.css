@@ -239,6 +239,10 @@ input.text {
 	margin: 5px 0 5px 0;
 }
 
+form#guest-book .hidden {
+	display: none;
+}
+
 input.submit {
 	margin: 15px 0 15px 0;
 }
