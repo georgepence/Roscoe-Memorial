@@ -52,7 +52,7 @@ div.lifestory {
 
 /* || Navigation Menu --------------------------------------------------------- */
 
-ul {
+ul.nav-bar {
 	list-style-type: none;
 	position: relative;
 	padding: 0;
@@ -106,6 +106,15 @@ div#carousel {
 	position: relative;
 }
 
+@media screen and (max-width: 600px) {
+	#carousel-title-left,
+	#carousel-title-right {
+		font-size: 12px;
+		position: relative;
+		display: none;
+	}
+}
+
 #carousel-title-right,
 #carousel-title-left {
 	position: absolute;
@@ -129,16 +138,27 @@ div#carousel {
 	right: .2em;
 }
 
-
-img.carousel-pics {
-	width: 100%;
-	max-width: 1125px;
-	margin: 5px;
-	position: absolute;
-	/*top:	0;*/
-	float: left;
-	opacity: 0.0;
+h2.remembering-roscoe {
+	font-size: 36px;
 }
+
+h3.remembering-roscoe {
+	font-size: 30px;
+}
+
+.remembering-roscoe {
+	text-align: center;
+}
+
+/*img.carousel-pics {     TODO */
+/*	width: 100%;*/
+/*	max-width: 1125px;*/
+/*	margin: 5px;*/
+/*	position: absolute;*/
+/*	!*top:	0;*!*/
+/*	float: left;*/
+/*	opacity: 0.0;*/
+/*}*/
 
 /* || Picture Gallery Page -------------------------------------------------- */
 
@@ -270,7 +290,7 @@ input.submit {
 	margin: 15px 0 15px 0;
 }
 
-/* Guest Book Page ---------------------------------------------------------- */
+/* SPCA Page ---------------------------------------------------------------- */
 
 a:link {
 	text-decoration-color: darkblue;
@@ -281,6 +301,20 @@ a:link {
 a:hover {
 	text-decoration: underline;
 	text-decoration-color: indigo;
+}
+
+li.spca {
+	float: none;
+	font-size: 18px;
+	font-weight: 200;
+	letter-spacing: 0.10em;
+	margin-top: 10px;
+}
+
+h2.spca {
+	font-size: 20px;
+	font-weight: 350;
+	text-align: center;
 }
 
 /* || DELETE EVERYTHING BELOW  ---------------------------------------------- */
