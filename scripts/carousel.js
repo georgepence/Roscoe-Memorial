@@ -1,86 +1,62 @@
+document.addEventListener('DOMContentLoaded', slideShow);
 
-window.addEventListener("load", function() {
-  let pics = document.getElementsByClassName("carousel-pics");
-  // document.getElementById("c-pose").style.opacity = "1.0"
-  // pic = pics[pics.length - 1].id
-  // console.log(pic)
-  pics[pics.length - 1].style.opacity = "1.0";
-  console.log("here")
-  runGallery(pics);
-})
+// ==============================    CITATION    ==============================
+//
+// All code below is from taken from from W3 Schools at
+// https://www.w3schools.com/howto/howto_js_slideshow.asp . I have put comments
+// to indicate my understanding of what is happening.
 
-function runGallery(pics) {
-  console.log("here too")
-  let i = 0;
-  let numPics = pics.length;
-  let j = numPics - 1;
+var slideIndex = 0;
+
+var dots = document.getElementsByClassName("dot");
+var slides = document.getElementsByClassName("mySlides");
+
+function slideShow() {
+  var i;
   
-  while (i < numPics) {
-    setInterval(function () {(j, i) => {console.log(j, i)}}, 2000);
-    j = i;
-    i += 1;
+  // All images are there, but only one will be visible.
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+    dots[i].className = dots[i].className.replace(" active", "");
   }
-  //
-  // pics[0].style.opacity = "1.0";
-  // pics[2].style.opacity = "0.0";
-  //
-  // window.setTimeout( function () {console.log("chico is hungry");}, 20000);
-  //
-  // pics[0].style.opacity = "0.0";
-  // pics[1].style.opacity = "1.0";
-
-}
-
-function changePicture(pics, j, i) {
-  console.log(j, i)
-  pics[j].style.opacity = "0.0";
-  pics[i].style.opacity = "1.0";
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  console.log(slideIndex, slides.length)
+  
+  // Make one image visible, beginning with 0
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  
+  // Call slideShow again, but only after 3.5 seconds
+  setTimeout(slideShow, 3500);
 }
 
 
-//   document.getElementById("pals-thumb").addEventListener('click', function () {
-//     console.log(document.getElementsByClassName("show"))
-//     document.getElementsByClassName("show")[0].classList.remove("show");
-//     document.getElementById("pals").classList.add("show");
-//   })
-//   document.getElementById("lex-thumb").addEventListener('click', function () {
-//     console.log(document.getElementsByClassName("show"))
-//     document.getElementsByClassName("show")[0].classList.remove("show");
-//     document.getElementById("lex").classList.add("show");
-//   })
-//   document.getElementById("cave-thumb").addEventListener('click', function () {
-//     console.log(document.getElementsByClassName("show"))
-//     document.getElementsByClassName("show")[0].classList.remove("show");
-//     document.getElementById("cave").classList.add("show");
-//   })
-//   document.getElementById("gate-thumb").addEventListener('click', function () {
-//     console.log(document.getElementsByClassName("show"))
-//     document.getElementsByClassName("show")[0].classList.remove("show");
-//     document.getElementById("gate").classList.add("show");
-//   })
-//   document.getElementById("pals2-thumb").addEventListener('click', function () {
-//     console.log(document.getElementsByClassName("show"))
-//     document.getElementsByClassName("show")[0].classList.remove("show");
-//     document.getElementById("pals2").classList.add("show");
-//   })
-//   document.getElementById("shower-thumb").addEventListener('click', function () {
-//     console.log(document.getElementsByClassName("show"))
-//     document.getElementsByClassName("show")[0].classList.remove("show");
-//     document.getElementById("shower").classList.add("show");
-//   })
-//   document.getElementById("deer-thumb").addEventListener('click', function () {
-//     console.log(document.getElementsByClassName("show"))
-//     document.getElementsByClassName("show")[0].classList.remove("show");
-//     document.getElementById("deer").classList.add("show");
-//   })
-//   document.getElementById("pose-thumb").addEventListener('click', function () {
-//     console.log(document.getElementsByClassName("show"))
-//     document.getElementsByClassName("show")[0].classList.remove("show");
-//     document.getElementById("pose").classList.add("show");
-//   })
-//   document.getElementById("memorial-thumb").addEventListener('click', function () {
-//     console.log(document.getElementsByClassName("show"))
-//     document.getElementsByClassName("show")[0].classList.remove("show");
-//     document.getElementById("memorial").classList.add("show");
-//   })
-// }
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+// Make image 'n' visible manually.  I chose not to terminate the automatic
+// carousel, because I thought continuing the animation made a better user
+// experience.
+function showSlides(n) {
+  var j;
+  
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+
+  for (j = 0; j < slides.length; j++) {
+    slides[j].style.display = "none";
+  }
+  
+  for (j = 0; j < dots.length; j++) {
+    dots[j].className = dots[j].className.replace(" active", "");
+  }
+
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}

@@ -3,12 +3,15 @@
 	<meta charset="UTF-8">
 	<title>Roscoe Memorial</title>
 	<link rel="stylesheet" href="styles/stylesheet.css" type="text/css">
+	<link rel="stylesheet" href="styles/slideshow_styles.css" type="text/css">
 	<script src="scripts/carousel.js"></script>
 </head>
 <body>
 <div class="aspect-ratio">
 	<div class="aspect2">
-			<!-- Menu implementation based on https://www.w3schools.com/css/css_navbar_vertical.asp -->
+		<!-- Menu implementation learned from W3, but it is my coding.    -->
+		<!--https://www.w3schools.com/css/css_navbar_vertical.asp         -->
+		
 		<ul class="nav-bar">
 			<li><a class="active" href="">Home</a></li>
 			<li><a href="lifestory.html">Life Story</a></li>
@@ -16,18 +19,58 @@
 			<li><a href="guest_book.html">Guest Book</a></li>
 			<li><a href="spca.html">SPCA</a></li>
 		</ul>
-		<div id="carousel" class="lifestyle">
-			<div id="carousel-main" class="carousel">
-				
-				<img id="c-pose" src="images/pose.jpeg"
-						 class="carousel-pics" alt="Roscoe is posing">
-				<img id="c-gate" src="images/gate.jpeg"
-						 class="carousel-pics" alt="Roscoe at the gate">
-				<img id="c-memorial" src="images/memorial.jpeg"
-						 class="carousel-pics" alt="Roscoe's Memorial Stone">
+		
+		<!--		=======================    CITATION      ========================-->
+		<!--		I borrowed the W3 slideshow code and made only minor             -->
+		<!--		modifications.  I have added comments (mainly to script / css    -->
+		<!--    code) to indicate my undstanding                                 -->
+		<!--		https://www.w3schools.com/howto/howto_js_slideshow.asp           -->
+		
+		<!-- Slideshow container -->
+		<div class="slideshow-container">
+			<h1 id="carousel-title-left">Roscoe</h1>
+			<h1 id="carousel-title-right">2007 - 2021</h1>
+		
+		<!--			Image with 100% will help with responsive display. -->
+		<!--			Not sure why that was not done in CSS -->
+			<div class="mySlides fade">
+<!--				<div class="numbertext">1 / 3</div>-->
+				<img src="images/pose.jpeg" style="width:100%">
+				<div class="text">Caption Text</div>
 			</div>
+			
+			<div class="mySlides fade">
+<!--				<div class="numbertext">2 / 3</div>-->
+				<img src="images/gate.jpeg" style="width:100%">
+				<div class="text">Caption Two</div>
+			</div>
+			
+			<div class="mySlides fade">
+<!--				<div class="numbertext">3 / 3</div>-->
+				<img src="images/memorial.jpeg" style="width:100%">
+				<div class="text">Caption Three</div>
+			</div>
+			
+			<!-- Next and previous buttons, clicking calls JavaScript -->
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
 		</div>
+		<br>
+		
+		<!-- The dots/circles, clicking calls JavaScript -->
+		<div style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+		</div>
+		
+		<!--		=======================  End of W3 Code  ========================-->
+		
+		<div>Roscoe</div>
+
+		
+		</div>
+
 	</div>
-</div>
 </body>
 </html>
