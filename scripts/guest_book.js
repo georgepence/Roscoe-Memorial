@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', startListening);
 
 function startListening() {
   document.getElementById("message").addEventListener("click", openForm);
-  // document.getElementById("submit").addEventListener("click", sendIt);
+  document.getElementById("submit").addEventListener("click", sendIt);
 }
 
 // The page initially opens to show the guest book entries that have been made,
@@ -34,25 +34,26 @@ function sendMessage() {
 
   // Get form data organized.
   let to_send = {};
+  let today = new Date();
+  
+  to_send.date = (today.getMonth()+1) + '/' +today.getDate() + '/' + today.getFullYear();
   to_send.message = document.getElementById("message").value;
   to_send.name = document.getElementById("name").value;
   to_send.email = document.getElementById("e-mail").value;
   to_send.anonymous = document.getElementById("hide-name").checked;
   
-  console.log(to_send)
   // Construct XMLHttp request
   let post_req = new XMLHttpRequest();
   let send_this = JSON.stringify(to_send);
-  http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php
+  
   // post_req.open('POST', 'http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php', true);
-  post_req.open('POST', 'http://flip3.engr.oregonstate.edu:7210', true);
+  post_req.open('POST', 'http://httpbin.org/post', true);
   post_req.setRequestHeader('Content-Type', 'application/json');
-  console.log("I'm here now!")
   
   // Asynchronous handling
   post_req.addEventListener('load', function() {
     if (post_req.status >= 200 && post_req.status < 400) {
-      console.log("No Error")
+      
       // Display response
       let post_response = JSON.parse(post_req.responseText).json;
       let display_messages = document.getElementById("guest-book-messages");

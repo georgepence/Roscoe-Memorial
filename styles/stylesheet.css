@@ -215,6 +215,7 @@ img.show {
 		max-width: 600px;
 		min-height: 100px;
 		max-height: 100px;
+		height: 100%;
 		background-color: black;
 		float: right;
 		/*min-height: 2000px;*/
