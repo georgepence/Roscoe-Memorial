@@ -1,10 +1,8 @@
-const fs = require('fs');
-
 document.addEventListener('DOMContentLoaded', startListening);
 
 function startListening() {
   document.getElementById("message").addEventListener("click", openForm);
-  document.getElementById("submit").addEventListener("click", sendIt);
+  document.getElementById("submit").addEventListener("click", sendMessage);
 }
 
 // The page initially opens to show the guest book entries that have been made,
@@ -57,7 +55,7 @@ function sendMessage() {
       // Display response
       let post_response = JSON.parse(post_req.responseText).json;
       let display_messages = document.getElementById("guest-book-messages");
-      display_messages.innerHTML = post_response();
+      
     
     } else {
       console.log("Error in network request (guest_book): " + post_req.statusText);
