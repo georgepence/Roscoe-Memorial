@@ -44,7 +44,7 @@ function sendMessage() {
   let post_req = new XMLHttpRequest();
   let send_this = JSON.stringify(to_send);
   
-  // post_req.open('POST', 'http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php', true);
+  // post_req.open('POST', 'https://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php', true);
   post_req.open('POST', 'https://httpbin.org/post', true);
   post_req.setRequestHeader('Content-Type', 'application/json');
   
@@ -63,7 +63,7 @@ function sendMessage() {
       // displayGuestBook();
     
     } else {
-      console.log("Error in network request (guest_book): " + post_req.statusText);
+      console.log("Error in network request (httpbin): " + post_req.statusText);
     }
     
     // Construct HTTP request to get previous messages from file
@@ -74,7 +74,9 @@ function sendMessage() {
     post_2.addEventListener('load', function() {
       if (post_2.status >= 200 && post_2.status < 400) {
         post_response = JSON.parse(post_2.responseText)
-        document.getElementById("guest-book-messages").innerHTML = post_response.message + post_response.name
+        document.getElementById("guest-book-messages").innerHTML = post_response
+      }else {
+        console.log("Error in network request (guest_book): " + post_req.statusText);
       }
     });
     
