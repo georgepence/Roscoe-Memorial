@@ -40,26 +40,44 @@ function sendMessage() {
   to_send.email = document.getElementById("e-mail").value;
   to_send.anonymous = document.getElementById("hide-name").checked;
   
-  // Construct XMLHttp request
+  // Construct XMLHttp request - only purpose is to satisfy form send requirement
   let post_req = new XMLHttpRequest();
   let send_this = JSON.stringify(to_send);
   
   // post_req.open('POST', 'http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php', true);
-  post_req.open('POST', 'http://httpbin.org/post', true);
+  post_req.open('POST', 'https://httpbin.org/post', true);
   post_req.setRequestHeader('Content-Type', 'application/json');
   
   // Asynchronous handling
   post_req.addEventListener('load', function() {
     if (post_req.status >= 200 && post_req.status < 400) {
       
-      // Display response
+      // Get response
       let post_response = JSON.parse(post_req.responseText).json;
-      let display_messages = document.getElementById("guest-book-messages");
       
+      // Update database of Messages (guest book signings)
+      document.getElementById("guest-book-messages").innerHTML = post_response.message
+      // updateGuestBook(post_response);
+      
+      // Display messages, with new message added at the top
+      // displayGuestBook();
     
     } else {
       console.log("Error in network request (guest_book): " + post_req.statusText);
     }
+    
+    // Construct HTTP request to get previous messages from file
+    let post_2 = new XMLHttpRequest()
+    post_2.open('POST', 'https://web.engr.oregonstate.edu/~penceg/roscoe-guestbook', true);
+    post_2.setRequestHeader('Content-Type', 'application/json');
+    
+    post_2.addEventListener('load', function() {
+      if (post_2.status >= 200 && post_2.status < 400) {
+        post_response = JSON.parse(post_2.responseText)
+        document.getElementById("guest-book-messages").innerHTML = post_response.message + post_response.name
+      }
+    });
+    
   });
   
   post_req.send(send_this);
