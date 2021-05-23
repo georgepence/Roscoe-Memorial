@@ -163,11 +163,11 @@ h3.remembering-roscoe {
 /* || Picture Gallery Page -------------------------------------------------- */
 
 div#gallery-main {
-	/*background-color: lightskyblue;*/
+/
 	max-height: 900px;
 	min-height: 300px;									/* Todo */
 	max-width: 900px;
-	width: 83%;
+	width: 80%;
 	float: right;
 }
 
@@ -177,7 +177,7 @@ div#gallery-scroll {
 	max-height: 900px;
 	min-height: 300px;									/* Todo */
 	max-width: 225px;
-	width: 17%;
+	width: 20%;
 	float: left;
 	text-align: center;
 	overflow: auto;
@@ -244,7 +244,7 @@ img.show {
 
 /* Life Story Page ---------------------------------------------------------- */
 
-#image-life, #image-spca {
+#image-life {
 	width: 100%;
 	max-width: 450px;
 	margin: 1% 1% 3% 3%;
