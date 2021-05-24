@@ -18,33 +18,37 @@
 </ul>
 <!--</div>-->
 <div id="life-story" class="lifestory">
-  <figure class="guest-book-memorial">
+  <div id="guestbook-picture-container" class="guest-book-memorial">
     <img id="guest-book-memorial" src="images/memorial_450x600.jpeg"
          class="guest-book-memorial" alt="Roscoe Memorial Garden Stone">
-  </figure>
+  </div>
   <header>
     Guest Book
   </header>
-<form id="guest-book"
-      method="POST">
-  <fieldset class="guest_book">
-    <textarea id="message" name="message" rows="3" placeholder="Leave a message..."></textarea>
-    <input type="text" class="text hidden" id="name" name="name" placeholder="Your name">
-    <input type="email" class="text hidden" id="e-mail" name="email" placeholder="Your e-mail">
-    <p class="hidden" id="par-1"></p><p class="hidden" id="par-2"></p>
-    <label class="check hidden" id="check-label">
-      <input type="checkbox" class="hidden" id="hide-name" name="hide">
-      Check here if you do not wish your name to appear in Guest Book with your message
-    </label>
-    <br/>
-    <input type="submit" id="submit" class="submit hidden" value="Send your message" />
-  </fieldset>
-</form>
-  <p id="guest-book-message" class="memory"></p>
-  <p id="guest-book-date-name" class="signature"></p>
-  <p class="memory">Roscoe was a magnificent dog, always cheerful and friendly.
-    We miss him!</p>
-  <p class="signature">5/18/2021     Mac</p>
+  <div id="guestbook-form-container">
+
+    <form id="guest-book"
+          method="POST">
+      <fieldset class="guest_book">
+        <textarea id="message" name="message" rows="3" placeholder="Leave a message..."></textarea>
+        <input type="text" class="text hidden" id="name" name="name" placeholder="Your name">
+        <input type="email" class="text hidden" id="e-mail" name="email" placeholder="Your e-mail">
+        <p class="hidden" id="par-1"></p>
+        <p class="hidden" id="par-2"></p>
+        <label class="check hidden" id="check-label">
+          <input type="checkbox" class="hidden" id="hide-name" name="hide">
+          Check here if you do not wish your name to appear in Guest Book with your message
+        </label>
+        <br/>
+        <input type="submit" id="submit" class="submit hidden" value="Send your message"/>
+      </fieldset>
+    </form>
+    <p id="guest-book-message" class="memory"></p>
+    <p id="guest-book-date-name" class="signature"></p>
+    <p class="memory">Roscoe was a magnificent dog, always cheerful and friendly.
+      We miss him!</p>
+    <p class="signature">5/18/2021 Mac</p>
+  </div>
 </div>
 </body>
 </html>
