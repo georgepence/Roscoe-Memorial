@@ -2,76 +2,76 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Roscoe Memorial</title>
-	<link rel="stylesheet" href="styles/stylesheet.css" type="text/css">
-	<link rel="stylesheet" href="styles/slideshow_styles.css" type="text/css">
-	<script src="scripts/carousel.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roscoe Memorial</title>
+  <link rel="stylesheet" href="styles/stylesheet.css" type="text/css">
+  <link rel="stylesheet" href="styles/slideshow_styles.css" type="text/css">
+  <script src="scripts/carousel.js"></script>
 </head>
 
 <body>
 <div class="aspect-ratio">
-	<div class="aspect2">
-		<!-- Menu implementation learned from W3, but it is my coding.    -->
-		<!--https://www.w3schools.com/css/css_navbar_vertical.asp         -->
-		
-		<ul class="nav-bar">
-			<li><a class="active" href="">Home</a></li>
-			<li><a href="lifestory.html">Life Story</a></li>
-			<li><a href="gallery.html">Gallery</a></li>
-			<li><a href="guest_book.html">Guest Book</a></li>
-			<li><a href="spca.html">SPCA</a></li>
-		</ul>
-		
-		<!--		=======================    CITATION      ========================-->
-		<!--		I borrowed the W3 slideshow code and made only minor             -->
-		<!--		modifications.  I have added comments (mainly to script / css    -->
-		<!--    code) to indicate my understanding                                 -->
-		<!--		https://www.w3schools.com/howto/howto_js_slideshow.asp           -->
-		
-		<!-- Slideshow container -->
-		<div class="slideshow-container">
-			<h1 id="carousel-title-left">Roscoe</h1>
-			<h1 id="carousel-title-right">2007 - 2021</h1>
-		
-		<!--			Image with 100% will help with responsive display. -->
-		<!--			I am not sure why w3 did not do that in CSS        -->
-			<div class="mySlides fade">
-				<img src="images/pose.jpeg" alt="Roscoe posing for the camera" style="width:100%">
-			</div>
-			
-			<div class="mySlides fade">
-				<img src="images/gate.jpeg" alt="Roscoe at the gate" style="width:100%">
-			</div>
-			
-			<div class="mySlides fade">
-				<img src="images/memorial.jpeg" alt="Garden memorial rock" style="width:100%">
-			</div>
-			
-			<!-- Next and previous buttons, clicking calls JavaScript -->
-			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-			<a class="next" onclick="plusSlides(1)">&#10095;</a>
-		</div>
-		<br>
-		
-		<!-- The dots/circles, clicking calls JavaScript -->
-		<div style="text-align:center">
-			<span class="dot" onclick="currentSlide(1)"></span>
-			<span class="dot" onclick="currentSlide(2)"></span>
-			<span class="dot" onclick="currentSlide(3)"></span>
-		</div>
-		
-		<!--		=======================  End of W3 Code  ========================-->
+  <div class="aspect2">
+    <!-- Menu implementation learned from W3, but it is my coding.    -->
+    <!--https://www.w3schools.com/css/css_navbar_vertical.asp         -->
 
-		<h2 class="remembering-roscoe">Remembering Roscoe</h2>
-		<h3 class="remembering-roscoe">2007 - 2014</h3>
-		<p>This is a celebration of the life of Roscoe, who passed on April 22, 2021.
-			Roscoe brought joy to all of our lives, and we want to share these
-			memories.</p>
-		
-		</div>
+      <ul class="nav-bar">
+        <li><a class="active" href="">Home</a></li>
+        <li><a href="lifestory.html">Life Story</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="guest_book.html">Guest Book</a></li>
+        <li><a href="spca.html">SPCA</a></li>
+      </ul>
+    <div id="main-page-container" class="lifestory">
+      <!--		=======================    CITATION      ========================-->
+      <!--		I borrowed the W3 slideshow code and made only minor             -->
+      <!--		modifications.  I have added comments (mainly to script / css    -->
+      <!--    code) to indicate my understanding                                 -->
+      <!--		https://www.w3schools.com/howto/howto_js_slideshow.asp           -->
 
-	</div>
+      <!-- Slideshow container -->
+      <div class="slideshow-container">
+        <h1 id="carousel-title-left">Roscoe</h1>
+        <h1 id="carousel-title-right">2007 - 2021</h1>
+
+        <!--			Image with 100% will help with responsive display. -->
+        <!--			I am not sure why w3 did not do that in CSS        -->
+        <div class="mySlides fade">
+          <img src="images/pose.jpeg" alt="Roscoe posing for the camera" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/gate.jpeg" alt="Roscoe at the gate" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/memorial.jpeg" alt="Garden memorial rock" style="width:100%">
+        </div>
+
+        <!-- Next and previous buttons, clicking calls JavaScript -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+
+      <!-- The dots/circles, clicking calls JavaScript -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+
+      <!--		=======================  End of W3 Code  ========================-->
+
+      <h2 class="remembering-roscoe">Remembering Roscoe</h2>
+      <h3 class="remembering-roscoe">2007 - 2014</h3>
+      <p>This is a celebration of the life of Roscoe, who passed on April 22, 2021.
+        Roscoe brought joy to all of our lives, and we want to share these
+        memories.</p>
+
+    </div>
+  </div>
+</div>
 </body>
 </html>
